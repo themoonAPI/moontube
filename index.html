@@ -1,28 +1,117 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080910">
+
     <title>MoonTube</title>
+    <meta name="description" content="MoonTube - A modern video streaming experience.">
+
+    <link rel="icon" href="m-logo.png">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <div class="logo">
-            <img src="m-logo.png" alt="Moon Logo" class="m-logo"> <!-- Your exact M nebula logo -->
-            <img src="moontube-text.png" alt="MoonTube" class="text-logo"> <!-- Your exact glowing text logo -->
-        </div>
-        <div class="search-bar">
-            <input type="text" id="search-input" placeholder="Enter YouTube video ID or URL">
-            <button id="search-btn">▶</button>
-        </div>
-    </header>
-    <main>
-        <div id="player-container" class="player-container">
-            <iframe id="player" width="100%" height="600" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </main>
+
+    <div class="app">
+
+        <header class="header">
+
+            <div class="logo">
+                <img src="m-logo.png" alt="MoonTube Icon" class="m-logo">
+                <img src="moontube-text.png" alt="MoonTube" class="text-logo">
+            </div>
+
+            <div class="search-container">
+                <div class="search-bar">
+                    <input
+                        type="text"
+                        id="search-input"
+                        placeholder="Search YouTube video ID or URL"
+                        autocomplete="off"
+                        spellcheck="false"
+                    >
+
+                    <button id="search-btn" type="button">
+                        Search
+                    </button>
+                </div>
+            </div>
+
+            <div class="header-right">
+                <span class="status-indicator"></span>
+                <span class="status-text">Ready to watch</span>
+            </div>
+
+        </header>
+
+        <main class="main-content">
+
+            <section class="welcome-section">
+                <div class="welcome-text">
+                    <span class="eyebrow">YOUR PERSONAL VIDEO PLAYER</span>
+                    <h1>Welcome to <span>MoonTube.</span></h1>
+                    <p>Watch your favorite videos in a clean, distraction-free environment.</p>
+                </div>
+            </section>
+
+            <section class="player-section">
+
+                <div class="section-header">
+                    <div>
+                        <h2>Now Playing</h2>
+                        <p>Your video will appear here.</p>
+                    </div>
+
+                    <span class="player-status">PLAYER</span>
+                </div>
+
+                <div id="player-container" class="player-container">
+
+                    <div class="player-placeholder" id="player-placeholder">
+                        <img src="m-logo.png" alt="MoonTube">
+
+                        <h3>Ready when you are</h3>
+
+                        <p>Enter a YouTube video ID or URL above to start watching.</p>
+                    </div>
+
+                    <iframe
+                        id="player"
+                        title="MoonTube Video Player"
+                        width="100%"
+                        height="100%"
+                        src=""
+                        frameborder="0"
+                        allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+                        allowfullscreen
+                    ></iframe>
+
+                </div>
+
+            </section>
+
+            <footer class="footer">
+                <div class="footer-brand">
+                    <img src="m-logo.png" alt="">
+                    <span>MoonTube</span>
+                </div>
+
+                <p>A better way to watch.</p>
+            </footer>
+
+        </main>
+
+    </div>
+
     <script src="script.js"></script>
+
 </body>
 </html>
+```
